@@ -30,8 +30,8 @@ export PATH=$PATH:/opt/jdk1.8.0_131/bin:/opt/jdk1.8.0_131/jre/bin
 java -version
 
 <b> Step 2: SCP files to your AWS instance</b>
-scp -i ./<pem file> <your local location>/jboss-image-streams.json ec2-user@<AWS Public DNS>:/home/ec2-user
-scp -i ./<pem file> <your local location>/sso70-mysql-persistent.json ec2-user@<AWS Public DNS>:/home/ec2-user
+<p>scp -i ./<pem file> your local location/jboss-image-streams.json ec2-user@<AWS Public DNS>:/home/ec2-user
+<p>scp -i ./<pem file> your local location/sso70-mysql-persistent.json ec2-user@<AWS Public DNS>:/home/ec2-user
 
 <b> Step 3: Set up keystores </b>
 Set up SSL keystore
