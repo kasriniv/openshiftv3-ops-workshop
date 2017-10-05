@@ -86,7 +86,7 @@ pv008             1Gi        RWO           Recycle         Available            
 
 ----END PV creation---------
 
-Step 3: Create a new project either via the openshift console or using the oc cli
+<b>Step 3: Create a new project either via the openshift console or using the oc cli</b>
 
 oc login (developer account will suffice, dont need admin)
 oc new-project <project_name> say 3scaleamp
@@ -98,7 +98,7 @@ The AMP template installs:
 2. One AMP admin portal and developer portal with persistent storage
 
 oc new-app --file /path/to/amp.yml --param WILDCARD_DOMAIN=<WILDCARD_DOMAIN> --param ADMIN_PASSWORD=3scaleUser
-<P><B>Note</B> The wildcard domain should be of the format <yourname or id>.apps.opsday.ocpcloud.com
+<p><B>Note</B> The wildcard domain should be of the format <yourname or id>.apps.opsday.ocpcloud.com
 
 That is it. Now, we wait for a few minutes for all the 3scale pods to come up.
 
