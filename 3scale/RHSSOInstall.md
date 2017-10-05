@@ -1,7 +1,8 @@
 
 These instructions are a cheat sheet for RHSSO install to be used with 3scale for SSO, OAuth etc usecases.
 <p><b> Step 1: Java 1.8 install/verify</b>
-cd /opt/
+
+<p>cd /opt/
 
 wget -c --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u131-b11/d54c1d3a095b4ff2b6607d096fa80163/jdk-8u131-linux-x64.tar.gz
 
@@ -28,18 +29,18 @@ export PATH=$PATH:/opt/jdk1.8.0_131/bin:/opt/jdk1.8.0_131/jre/bin
 ****verify
 java -version
 
-<B> Step 2: SCP files to your AWS instance</B>
+<b> Step 2: SCP files to your AWS instance</b>
 scp -i ./<pem file> <your local location>/jboss-image-streams.json ec2-user@<AWS Public DNS>:/home/ec2-user
 scp -i ./<pem file> <your local location>/sso70-mysql-persistent.json ec2-user@<AWS Public DNS>:/home/ec2-user
 
-<B> Step 3: Set up keystores 
+<b> Step 3: Set up keystores </b>
 # Setup SSL Keystore
 keytool -genkeypair -alias keystore -storetype jks -keyalg RSA -keysize 2048 -keypass password1 -keystore keystore.jks -storepass password1 -dname "CN=SSL-Keystore,OU=Sales,O=Systems Inc,L=Raleigh,ST=NC,C=US" -validity 730 -v
 
 # JGroups Keystore
 keytool -genkeypair -alias jgroups -storetype jceks -keyalg RSA -keysize 2048 -keypass password1 -keystore jgroups.jceks -storepass password1 -dname "CN=JGROUPS,OU=Sales,O=Systems Inc,L=Raleigh,ST=NC,C=US" -validity 730 -v
 
-<B>Step 4: create RHSSO project on Openshift and install
+<b>Step 4: create RHSSO project on Openshift and install</b>
 
 oc login -u developer
 oc new-project rhsso
@@ -54,7 +55,7 @@ sudo oc login -u system:admin
 
 sudo oc create -n openshift -f jboss-image-streams.json
 sudo oc process -f sso70-mysql-persistent.json -v HTTPS_NAME=keystore -v HTTPS_PASSWORD=password1 | sudo oc create -n myproject -f -
-<B> Step 5: Routes and RHSSO login</B>
+<b> Step 5: Routes and RHSSO login</b>
 
 ****append/auth to your **https** route
 	https://secure-sso-myproject.<AWS IP>.xip.io/auth
