@@ -34,11 +34,11 @@ scp -i ./<pem file> <your local location>/jboss-image-streams.json ec2-user@<AWS
 scp -i ./<pem file> <your local location>/sso70-mysql-persistent.json ec2-user@<AWS Public DNS>:/home/ec2-user
 
 <b> Step 3: Set up keystores </b>
-# Setup SSL Keystore
-keytool -genkeypair -alias keystore -storetype jks -keyalg RSA -keysize 2048 -keypass password1 -keystore keystore.jks -storepass password1 -dname "CN=SSL-Keystore,OU=Sales,O=Systems Inc,L=Raleigh,ST=NC,C=US" -validity 730 -v
+Set up SSL keystore
+<p>keytool -genkeypair -alias keystore -storetype jks -keyalg RSA -keysize 2048 -keypass password1 -keystore keystore.jks -storepass password1 -dname "CN=SSL-Keystore,OU=Sales,O=Systems Inc,L=Raleigh,ST=NC,C=US" -validity 730 -v
 
-# JGroups Keystore
-keytool -genkeypair -alias jgroups -storetype jceks -keyalg RSA -keysize 2048 -keypass password1 -keystore jgroups.jceks -storepass password1 -dname "CN=JGROUPS,OU=Sales,O=Systems Inc,L=Raleigh,ST=NC,C=US" -validity 730 -v
+Set up Jgroups Keystore
+<p>keytool -genkeypair -alias jgroups -storetype jceks -keyalg RSA -keysize 2048 -keypass password1 -keystore jgroups.jceks -storepass password1 -dname "CN=JGROUPS,OU=Sales,O=Systems Inc,L=Raleigh,ST=NC,C=US" -validity 730 -v
 
 <b>Step 4: create RHSSO project on Openshift and install</b>
 
