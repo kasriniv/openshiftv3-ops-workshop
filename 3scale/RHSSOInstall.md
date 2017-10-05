@@ -50,12 +50,12 @@ oc create serviceaccount sso-service-account
 oc policy add-role-to-user view system:serviceaccount:rhsso:sso-service-account -n rhsso
 oc secret add sa/sso-service-account secret/sso-app-secret
 
-# Login as admin to install image streams
+Login as admin to install image streams
 sudo oc login -u system:admin
 
 sudo oc create -n openshift -f jboss-image-streams.json
 sudo oc process -f sso70-mysql-persistent.json -v HTTPS_NAME=keystore -v HTTPS_PASSWORD=password1 | sudo oc create -n myproject -f -
-<b> Step 5: Routes and RHSSO login</b>
+<p><b> Step 5: Routes and RHSSO login</b>
 
 ****append/auth to your **https** route
 	https://secure-sso-myproject.<AWS IP>.xip.io/auth
