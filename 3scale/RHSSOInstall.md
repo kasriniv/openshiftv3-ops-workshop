@@ -55,17 +55,20 @@ Login as admin to install image streams
 sudo oc login -u system:admin
 
 sudo oc create -n openshift -f jboss-image-streams.json
-sudo oc process -f sso70-mysql.json -v HTTPS_NAME=keystore -v HTTPS_PASSWORD=password1 | sudo oc create -n rhsso -f -
+sudo oc process -f sso71-mysql.json -v HTTPS_NAME=keystore -v HTTPS_PASSWORD=password1 | sudo oc create -n rhsso -f -
 <p><b> Step 5: Routes and RHSSO login</b>
 
 ****append/auth to your **https** route
-	https://secure-sso-myproject.<AWS IP>.xip.io/auth
+	https://secure-sso-rhsso.<AWS IP>/auth
+	Change the 'sso' openshift deployment : SSO_ADMIN_USERNAME and SSO_ADMIN_PASSWORD to admin and admin
 ****Choose Administration Console
 ****Login as admin/admin
 ****Under Realm Settings -> Login, set Require SSL to none
 
-http://sso-myproject.<AWS IP>.xip.io/auth
+http://sso-myproject.<AWS IP>/auth
 ****Login as admin/admin
-	Create a realm atpco. 
+	Create a realm <myrealm>. 
 	Under Realm Settings -> Login, set Require SSL to none
+	
+<p> You are now ready to move on to configuring RHSSO with 3scale !
 
