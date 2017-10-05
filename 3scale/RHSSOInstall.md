@@ -45,10 +45,10 @@ Set up Jgroups Keystore
 oc login -u developer (or any account that has developer privs)
 <p>oc new-project rhsso
 
-oc create secret generic sso-app-secret --from-file=keystore.jks --from-file=jgroups.jceks
-oc create serviceaccount sso-service-account
-oc policy add-role-to-user view system:serviceaccount:rhsso:sso-service-account -n rhsso
-oc secret add sa/sso-service-account secret/sso-app-secret
+<p>oc create secret generic sso-app-secret --from-file=keystore.jks --from-file=jgroups.jceks
+<p>oc create serviceaccount sso-service-account
+<p>oc policy add-role-to-user view system:serviceaccount:rhsso:sso-service-account -n rhsso
+<p>oc secret add sa/sso-service-account secret/sso-app-secret
 
 
 Login as admin to install image streams
