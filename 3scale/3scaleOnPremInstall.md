@@ -101,8 +101,8 @@ Note:The wildcard domain should be of the format - apps.<kavs/yourid>.sc.oseclou
 
 That is it. Now, we wait for a few minutes for all the 3scale pods to come up.
 
-<p>Step 5: Verification
-<p>To access the 3scale API Manager UI, go to:
+Step 5: Verification
+To access the 3scale API Manager UI, go to:
 https://3scale-admin.apps.kavs.sc.osecloud.com  (use your id)
 Login: admin/3scaleUser  
 Now, you are all set to proceed to 3scale specific labs !
