@@ -17,13 +17,13 @@ If you DONT HAVE free PVs, do the following steps..
  This NFS server should have been mapped to /exports. Check your /exports folder
  <p> ls /exports</p>
  output should be similar to the below:
-etcd  logging  logging-es-ops  metrics  registry  vol1  vol2  vol3  vol4
+<p>etcd  logging  logging-es-ops  metrics  registry  vol1  vol2  vol3  vol4</p>
 
 <p>Let us create a few volumes on this folder.
-mkdir -p /exports/vol5
-mkdir -p /exports/vol6
-mkdir -p /exports/vol7
-mkdir -p /exports/vol8
+<p>mkdir -p /exports/vol5
+<p>mkdir -p /exports/vol6
+<p>mkdir -p /exports/vol7
+<p>mkdir -p /exports/vol8
 
 <p>Change the ownership to nfsnobody and give 777 permissions 
 <p>chown nfsnobody:nfsnobody /exports/vol5 /exports/vol6 /exports/vol7 /exports/vol8 /exports/vol9
