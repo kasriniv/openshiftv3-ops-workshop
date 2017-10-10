@@ -85,9 +85,9 @@ pv008             1Gi        RWO           Recycle         Available            
 
 ----END PV creation---------
 
-<p>Step 3: Create a new project either via the openshift console or using the oc cli
+Step 3: Create a new project either via the openshift console or using the oc cli
 
-<p>oc login (developer account will suffice, dont need admin)
+oc login (developer account will suffice, dont need admin)
 <p>oc new-project <project_name> say 3scaleamp
 
 <p>Step 4: Create a new app with the AMP template
