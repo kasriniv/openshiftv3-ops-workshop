@@ -26,7 +26,7 @@ If you DONT HAVE free PVs, do the following steps..
 <p>mkdir -p /exports/vol8
 
 <p>Change the ownership to nfsnobody and give 777 permissions 
-<p>chown nfsnobody:nfsnobody /exports/vol5 /exports/vol6 /exports/vol7 /exports/vol8 /exports/vol9
+<p>chown nfsnobody:nfsnobody /exports/vol5 /exports/vol6 /exports/vol7 /exports/vol8 
 <p>chmod 777 /exports/vol5 /exports/vol6 /exports/vol7 /exports/vol8 
 
 <p>You would want to declare these folders that you just created as NFS exports
