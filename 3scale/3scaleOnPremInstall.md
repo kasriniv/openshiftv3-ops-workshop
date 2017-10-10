@@ -91,11 +91,14 @@ oc login (developer account will suffice, dont need admin)
 oc new-project <project_name> say 3scaleamp
 
 Step 4: Create a new app with the AMP template
+
 Note that in the install guide, you access the template from a 3scale rpm but for this lab, we will make it available here.
 The AMP template installs:
 1. Two built-in API gateways
 2. One AMP admin portal and developer portal with persistent storage
 
+copy the amp.yml from /resources folder to your master: e2-user home.
+scp -i <mykey.pem> /localpath/to/amp.yml ec2-user@PUBLIC IP OF MASTER:~
 oc new-app --file /path/to/amp.yml --param WILDCARD_DOMAIN=<WILDCARD_DOMAIN> --param ADMIN_PASSWORD=3scaleUser
 Note:The wildcard domain should be of the format - apps.<kavs/yourid>.sc.osecloud.com
 
