@@ -15,7 +15,7 @@ If you DONT HAVE free PVs, do the following steps..
 <p>-----START PV creation------
 <p>On day 1 you have setup an openshift cluster that installed an NFS Server on the master.
  This NFS server should have been mapped to /exports. Check your /exports folder
- <p> ls /exports
+ <p> ls /exports</p>
  output should be similar to the below:
 etcd  logging  logging-es-ops  metrics  registry  vol1  vol2  vol3  vol4
 
