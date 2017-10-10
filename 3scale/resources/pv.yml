@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  annotations:
+  name: pv001 
+spec:
+  accessModes:
+  - ReadWriteMany
+  capacity:
+    storage: 1Gi
+  nfs:
+    path: /exports/vol1     
+    server: 10.0.0.86
+  persistentVolumeReclaimPolicy: Recycle
