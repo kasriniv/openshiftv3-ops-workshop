@@ -63,7 +63,7 @@ spec:
     storage: 1Gi
   nfs:
     path: /exports/vol1     
-    server: 10.0.0.86
+    server: 10.0.0.86 <CHANGE THIS TO YOUR MASTER'S INTERNAL IP>
   persistentVolumeReclaimPolicy: Recycle
   
   <p>ip address above is the private ip of the master as NFS is running on the master. We create 4 pvs with this template: 3 with ReadWriteOnce and 1 with ReadWriteMany.
