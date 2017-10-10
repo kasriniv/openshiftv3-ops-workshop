@@ -50,8 +50,8 @@ The current exports are created by ansible playbook that installed openshift and
 <p>cat /var/lib/nfs/etab\
 should show you the entries for your exports
 
-<p># cat pv.yml
-apiVersion: v1
+<p># cat pv.yml</p>
+<p>apiVersion: v1
 kind: PersistentVolume
 metadata:
   annotations:
@@ -66,7 +66,7 @@ spec:
     server: 10.0.0.86
   persistentVolumeReclaimPolicy: Recycle
   
-  ip address above is the private ip of the master as NFS is running on the master. We create 4 pvs with this template: 3 with ReadWriteOnce and 1 with ReadWriteMany.
+  <p>ip address above is the private ip of the master as NFS is running on the master. We create 4 pvs with this template: 3 with ReadWriteOnce and 1 with ReadWriteMany.
   
 <p>You can edit the file each time or run it from commandline with sed as follows
 
