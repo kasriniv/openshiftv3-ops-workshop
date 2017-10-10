@@ -88,22 +88,22 @@ pv008             1Gi        RWO           Recycle         Available            
 Step 3: Create a new project either via the openshift console or using the oc cli
 
 oc login (developer account will suffice, dont need admin)
-<p>oc new-project <project_name> say 3scaleamp
+oc new-project <project_name> say 3scaleamp
 
-<p>Step 4: Create a new app with the AMP template
-<p>Note that in the install guide, you access the template from a 3scale rpm but for this lab, we will make it available here.
-<p>The AMP template installs:
+Step 4: Create a new app with the AMP template
+Note that in the install guide, you access the template from a 3scale rpm but for this lab, we will make it available here.
+The AMP template installs:
 1. Two built-in API gateways
 2. One AMP admin portal and developer portal with persistent storage
 
-<p>oc new-app --file /path/to/amp.yml --param WILDCARD_DOMAIN=<WILDCARD_DOMAIN> --param ADMIN_PASSWORD=3scaleUser
-<p><B>Note</B> The wildcard domain should be of the format <yourname or id>.apps.opsday.ocpcloud.com
+oc new-app --file /path/to/amp.yml --param WILDCARD_DOMAIN=<WILDCARD_DOMAIN> --param ADMIN_PASSWORD=3scaleUser
+Note:The wildcard domain should be of the format - apps.<kavs/yourid>.sc.osecloud.com
 
 That is it. Now, we wait for a few minutes for all the 3scale pods to come up.
 
 <p>Step 5: Verification
 <p>To access the 3scale API Manager UI, go to:
-https://3scale-admin.kavitha.apps.opsday.ocpcloud.com   (use your id)
-Login: admin/3scaleUser
+https://3scale-admin.apps.kavs.sc.osecloud.com  (use your id)
+Login: admin/3scaleUser  
 Now, you are all set to proceed to 3scale specific labs !
 
