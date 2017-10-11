@@ -50,7 +50,7 @@ The current exports are created by ansible playbook that installed openshift and
 <p>cat /var/lib/nfs/etab\
 should show you the entries for your exports
 
-<p># cat pv.yml</p>
+<p># vi pv.yml</p>
 <p>apiVersion: v1
 kind: PersistentVolume
 metadata:
