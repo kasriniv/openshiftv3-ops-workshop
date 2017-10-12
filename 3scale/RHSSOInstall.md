@@ -31,7 +31,7 @@ java -version
 
 <b> Step 2: SCP files to your AWS instance</b>
 <p>scp -i ./your-pem-file your local location/jboss-image-streams.json ec2-user@<AWS Public DNS>:/home/ec2-user
-<p>scp -i ./your-pem-file your local location/sso70-mysql-persistent.json ec2-user@<AWS Public DNS>:/home/ec2-user
+<p>scp -i ./your-pem-file your local location/sso71-mysql.json ec2-user@<AWS Public DNS>:/home/ec2-user
 
 <b> Step 3: Set up keystores </b>
 Set up SSL keystore
