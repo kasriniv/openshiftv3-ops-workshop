@@ -31,7 +31,7 @@ If you DONT HAVE free PVs, do the following steps..
 
 <p>You would want to declare these folders that you just created as NFS exports
 The current exports are created by ansible playbook that installed openshift and are listed in this file
-<p># ls /etc/exports.d openshift-ansible.exports
+<p># ls /etc/exports.d/openshift-ansible.exports
 <p>While we can edit this file to add your exports, let us create a separate file instead and edit the following entries
 <p># vi /etc/exports.d/veer.exports
 
