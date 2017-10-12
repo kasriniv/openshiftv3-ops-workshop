@@ -66,7 +66,8 @@ sudo oc process -f sso71-mysql.json -v HTTPS_NAME=keystore -v HTTPS_PASSWORD=pas
 ****Under Realm Settings -> Login, set Require SSL to none
 
 http://sso-myproject.<AWS IP>/auth
-****Login as admin/admin
+****Login as admin/admin  
+<p>If you cant login in, go to the sso deployment and change SSO_ADMIN_USERNAME and SSO_ADMIN_PASSWORD to admin
 	Create a realm <myrealm>. 
 	Under Realm Settings -> Login, set Require SSL to none
 	
