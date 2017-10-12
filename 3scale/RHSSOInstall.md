@@ -55,7 +55,7 @@ Login as admin to install image streams
 sudo oc login -u system:admin
 
 sudo oc create -n openshift -f jboss-image-streams.json
-sudo oc process -f sso71-mysql.json -v HTTPS_NAME=keystore -v HTTPS_PASSWORD=password1 | sudo oc create -n rhsso -f -
+<p>sudo oc process -f sso71-mysql.json -v HTTPS_NAME=keystore -v HTTPS_PASSWORD=password1 | sudo oc create -n rhsso -f -
 <p><b> Step 5: Routes and RHSSO login</b>
 
 ****append/auth to your **https** route
