@@ -47,7 +47,7 @@ The current exports are created by ansible playbook that installed openshift and
 <p>systemctl restart nfs
 
 <p>verify that the exports are available 
-<p>cat /var/lib/nfs/etab\
+<p>cat /var/lib/nfs/etab
 should show you the entries for your exports
 
 <p># vi pv.yml</p>
